@@ -5,7 +5,7 @@ Instructions on how to set up the project on your local machine.
 
 ### Prerequisites
 
-List the software and libraries required to run the project.
+List of the software and libraries required to run the project.
 1. python 
 2. tensorflow
 3. pandas
@@ -31,10 +31,10 @@ How to use the different parts of the project.
 
 Instructions on how to use the clustering module.
 
-To run the clustermap run the following command.
-cd cluster/clustermap
+To run the clustermap run the following command.<br>
+cd cluster/clustermap<br>
 python clustermap.py
 
-To run the kmeans run the following command.
-cd cluster/kmeans
+To run the kmeans run the following command.<br>
+cd cluster/kmeans<br>
 python kmeans.py
