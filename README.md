@@ -17,7 +17,24 @@ List the software and libraries required to run the project.
 
 ### Clone the Repository
 git clone https://github.com/KrishnaRauniyar/Neurotransmitter.git
+
 cd Neurotransmitter
 
 ### Install Dependencies
 pip install -r requirements.txt
+
+## Usage
+
+How to use the different parts of the project.
+
+### Cluster
+
+Instructions on how to use the clustering module.
+
+To run the clustermap run the following command.
+cd cluster/clustermap
+python clustermap.py
+
+To run the kmeans run the following command.
+cd cluster/kmeans
+python kmeans.py
