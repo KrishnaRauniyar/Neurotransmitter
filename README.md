@@ -42,7 +42,7 @@ python kmeans.py
 ### DNN Unbalanced
 
 Instructions on how to use the DNN (Deep Neural Network) for unbalanced data.<br>
-Make a <results> directory to store the results
+Make a "<results>" directory to store the results
 
 cd dnn_unbalanced<br>
 python neuro_transmitter_unbalanced.py
