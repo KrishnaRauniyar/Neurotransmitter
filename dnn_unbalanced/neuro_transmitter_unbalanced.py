@@ -46,17 +46,17 @@ class NeuroTransmitterClassifier:
         self.y_test_one_hot = to_categorical(self.y_test, num_classes=7)
 
     def build_model(self):
-        self.model = Sequential()
-        self.model.add(Dense(80, activation='relu'))
-        self.model.add(Dropout(0.2))
-        self.model.add(Dense(40, activation='relu'))
-        self.model.add(Dropout(0.2))
-        self.model.add(Dense(20, activation='relu'))
-        self.model.add(Dropout(0.2))
-        self.model.add(Dense(units=7, activation='softmax'))
+        self.model = Sequential([
+            Dense(128, activation='relu'),
+            Dropout(0.2),
+            Dense(64, activation='relu'),
+            Dropout(0.2),
+            Dense(32, activation='relu'),
+            Dense(units=7, activation='softmax')
+        ])
         self.model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    def train_model(self, epochs=25, batch_size=256):
+    def train_model(self, epochs=25, batch_size=32):
         self.model.fit(x=self.X_train, y=self.y_train_one_hot, epochs=epochs, batch_size=batch_size, validation_data=(self.X_test, self.y_test_one_hot))
 
     def plot_loss(self):

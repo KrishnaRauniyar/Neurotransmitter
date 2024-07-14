@@ -54,18 +54,17 @@ class NeuroTransmitterClassifier:
     
     def build_model(self):
         self.model = Sequential([
-            Dense(80, activation='relu'),
+            Dense(128, activation='relu'),
             Dropout(0.2),
-            Dense(40, activation='relu'),
+            Dense(64, activation='relu'),
             Dropout(0.2),
-            Dense(20, activation='relu'),
-            Dropout(0.2),
+            Dense(32, activation='relu'),
             Dense(units=7, activation='softmax')
         ])
         self.model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    def train_model(self, epochs=25, batch_size=256):
-        self.model.fit(x=self.X_train, y=self.y_train, epochs=epochs, batch_size=batch_size, validation_data=(self.X_test, self.y_test))
+    def train_model(self, epochs=25, batch_size=32):
+        self.model.fit(x=self.X_train, y=self.y_train, epochs=epochs, batch_size=batch_size, validation_data=(self.X_test, self.y_test), verbose= 2)
 
     def plot_loss(self):
         plt.plot(self.model.history.history['loss'], label='Training Loss')
