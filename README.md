@@ -33,3 +33,13 @@ cd Neurotransmitter
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage
+
+Below are instructions for running each module.
+
+### **Cluster Module**
+
+#### Distance Matrix Requirement
+A distance matrix file is required, which can be generated using:
+https://github.com/dbxmcf/hsp70_actin
