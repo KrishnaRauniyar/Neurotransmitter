@@ -26,3 +26,10 @@ Install the following before running the project:
 ```bash
 git clone https://github.com/KrishnaRauniyar/Neurotransmitter.git
 cd Neurotransmitter
+```
+
+### **Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
