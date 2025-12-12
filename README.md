@@ -98,12 +98,12 @@ The **roshambo/** folder contains your Roshambo-based molecular similarity pipel
 
 ### Install Roshambo Package
 
-You must install the Roshambo package separately before running the pipeline.
+You must install the Roshambo package separately before running the pipeline. More information can be found here: https://github.com/molecularinformatics/roshambo
 
 **1. Clone the repository:**
 
 ```bash
-git clone [git clone https://github.com/rashatwi/roshambo.git]
+git clone https://github.com/rashatwi/roshambo.git
 cd roshambo
 ```
 
@@ -139,3 +139,12 @@ get_similarity_scores(
     working_dir="data/basic_run",
 )
 ```
+
+#### Script Description:
+
+* **Compare** a reference molecule (`query.sdf`) to all molecules in `dataset.sdf`.
+* **Compute** 3D shape similarity, color similarity, and `ComboTanimoto` scores.
+* **Ignore** hydrogens for molecular alignment and shape calculation.
+* **Write results** to the directory specified by `working_dir`.
+
+Your project’s `roshambo/` folder integrates this workflow for specific neurotransmitter datasets.
